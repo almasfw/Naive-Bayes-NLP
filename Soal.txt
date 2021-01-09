@@ -1,0 +1,31 @@
+The dataset used in this assignment is part of the CLICK-ID dataset (https://www.sciencedirect.com/science/article/pii/S2352340920311252?via%3Dihub)
+Used the annotated_okezone.csv as the training data and annotated_fimela.csv as the test data.
+For each of the csv files, used only the title (first column) as the text data and the last column (label) as the class for each of the sample.
+
+On the training phase:
+- create vocabulary (unique words) from the training data (since the number of words may be too large, pick only 1000 most frequent words as the vocabulary) (Mark: 3 points)
+- estimate two parameters for Multinomial Naive Bayes Model (P(Cj)) and P(wi|Cj)) (Mark: 4 points)
+- apply Add-1 Smoothing to avoid zero probabilites (Mark: 1 point)
+
+On the test phase:
+- for each of the sample in the test data, predict most likely class (CMAP) (Mark: 3 points)
+
+Evaluation:
+implement evaluation by writing codes for calculating (Accuracy, Precision, Recall, and F1)-- you can start by creating contingency table consist of TP, FP, TN, FN 
+- compare micro averaging vs macroaveraging results for all the four evaluation metrics mentioned above  ( Mark: 2 points)
+- provide analysis on the results (Mark: 2 points)
+
+
+Note: 
+You should submit a python notebook file (naivebayes_yourfirstname.ipynb) which not only listing your code, but also the 
+explanation of each part of the code (following the instructions above- for example: on the training phase, there are 3 parts, so you need to provide explanation for each of them).
+
+You are not allowed to use any Machine Learning libraries such as Scikit-Learn and NLTK to implement Naive Bayes Classifier.
+Part of NLTK libraries can be used to calculate the component of NB classifier, such as word count, most frequent word.
+Other Python libraries such as Numpy, Pandas, Scipy can be used in your code.
+
+
+This assignment will take 15% of the total marks.
+Deadline 19 October 2020, 23.00 (midnight), submission only via Elok.
+penalty 75% for copying code/report 
+no late submission
